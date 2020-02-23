@@ -1,8 +1,8 @@
 {
   "twitter":{
-    "consKey":"put your Consumer API key",
-    "consSecret":"Consumer API secret key",
-    "accessKey":"Access token",
-    "accessSecret":"Access token secret"
+    "consKey":"9BsrbVJhC6P32Sw2lrMkBrHpF",
+    "consSecret":"1BAriA2o3FBSyyPxJ52kWlJTw934n7KhEm3AfQfYtEDN5i8lkX",
+    "accessKey":"959113366982848512-etYLTkzxHOep4cZ6oe75K15gtrRvS98",
+    "accessSecret":"r0CCWU7aKhDkZZ5T1bkOFjsX4kuwpXT5muQikR7nJYs6v"
   }
 }

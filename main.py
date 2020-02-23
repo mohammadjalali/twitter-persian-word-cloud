@@ -12,8 +12,8 @@ with open('config.json', 'r') as f:
 
 dev = dev['twitter']
 
-consKey = dev['consKey']  # put your Consumer API key
-consSecret = dev['consSecret'] # put your Consumer API secret key
+consKey = dev['consKey'] 
+consSecret = dev['consSecret'] 
 accessKey = dev['accessKey']
 accessSecret = dev['accessSecret']
 
@@ -31,20 +31,20 @@ counter = 0
 cloud = ""
 txt = ""
 
-username = input("Enter the term to be searched")
-number_of_tweets = int(input("Enter the number of tweets"))
+username = input("Enter the username: ")
+numberOfTweets = int(input("Enter the number of tweets: "))
 
-if number_of_tweets > 200:
-    numberOfPages = int(number_of_tweets/200)
+if numberOfTweets > 200:
+    numberOfPages = int(numberOfTweets/200)
 else:
-    numberOfTweetsPerPage = number_of_tweets
+    numberOfTweetsPerPage = numberOfTweets
 
 
 for i in range(numberOfPages):
     tweets = api.user_timeline(screen_name=username, count=numberOfTweetsPerPage, page=i)
     for each in tweets:
         cloud = each.text
-        cloud = re.sub(r'[A-Za-z@]*', '', cloud)
+        cloud = re.sub(r'[A-Za-z@_]*', '', cloud)
         counter += 1
         txt = txt + ' ' + each.text
         print(counter, cloud)
@@ -59,7 +59,7 @@ stop = ['می', 'من', 'که', 'به', 'رو', 'از', 'ولی', 'با', 'یه'
         'هم', 'شد', 'ها', 'اما', 'تو', 'واقعا', 'در', 'نه', 'دارم', 'باید',
         'آره', 'برای', 'تا', 'چه', 'کنم', 'بود', 'همه', 'دیگه', 'ای', 'اون',
         'تی', 'حالا', 'بی', 'د', 'چرا', 'بابا', 'منم', 'کیه', 'توی', 'نیست', 'چی', 'باشه', 'که',
-        'بودم', 'می کنم', 'که', 'اینه', 'بهتر', 'داره', '']
+        'بودم', 'می کنم', 'که', 'اینه', 'بهتر', 'داره', 'اینه', 'که']
 wc = WordCloudFa(
     persian_normalize=True,
     max_words=30000,
@@ -68,7 +68,7 @@ wc = WordCloudFa(
     height=2500,
     min_font_size=1,
     max_font_size=3000,
-    background_color="black",
+    background_color="white",
     mask=twitter_mask,
     include_numbers=False,
     stopwords=stop
