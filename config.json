@@ -1,0 +1,8 @@
+{
+  "twitter":{
+    "consKey":"put your Consumer API key",
+    "consSecret":"Consumer API secret key",
+    "accessKey":"Access token",
+    "accessSecret":"Access token secret"
+  }
+}
