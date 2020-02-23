@@ -12,4 +12,4 @@ You have to do these two steps till your project would work:
 - image==1.5.28
 - arabic-reshaper==2.0.15
 
-2- Second of all config your json file for twitter APIs
+2- Second of all edit config.json file for twitter APIs
