@@ -10,4 +10,4 @@ You have to do these two steps till your project would work:
 
 or you can install all requirements in by **pip install -r requirements**
 
-2- Second of all config your json file for twitter APIs
+2- Second of all put your **keys** and **tokens** from your app in **config.json**
